@@ -1,0 +1,19 @@
+package com.pe.indra.product.rules
+import com.pe.indra.product.domain.repository.ProductRepository;
+import com.pe.indra.product.application.ProductUserCaseImpl;
+global com.pe.indra.product.infrastructure.persistence.MongoProductRepositoryImpl mongoProductRepository;
+global com.pe.indra.product.infrastructure.persistence.R2dbcProductRepositoryImpl r2dbcProductRepository;
+
+rule "MongoDB Repository"
+when
+    $factory : ProductUserCaseImpl(db == "mongo")
+then
+    $factory.setProductRepository(mongoProductRepository);
+end
+
+rule "R2DBC Repository"
+when
+    $factory : ProductUserCaseImpl(db == "r2dbc")
+then
+    $factory.setProductRepository(r2dbcProductRepository);
+end

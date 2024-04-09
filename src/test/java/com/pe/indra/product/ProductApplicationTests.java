@@ -1,4 +1,4 @@
-package com.pe.indra.product.boot;
+package com.pe.indra.product;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
