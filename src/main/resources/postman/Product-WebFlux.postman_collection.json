@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "244bbc50-5d1f-4db6-a8df-fa89c030bac1",
+		"name": "Product-WebFlux",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1921052",
+		"_collection_link": "https://lively-spaceship-195223.postman.co/workspace/Pruebas~4c87c84c-bfa3-4cb3-b82b-976a81620dd4/collection/1921052-244bbc50-5d1f-4db6-a8df-fa89c030bac1?action=share&source=collection_link&creator=1921052"
+	},
+	"item": [
+		{
+			"name": "R2dbc",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "db",
+								"value": "r2dbc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Radio\",\r\n  \"description\": \"Musica \",\r\n  \"brandId\": \"Panasonic\",\r\n  \"salePrice\": 454,\r\n  \"quantity\": 2,\r\n  \"type\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "db",
+								"value": "r2dbc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Televisor\",\r\n    \"description\": \"sala cambiada\",\r\n    \"brandId\": \"Panasonic\",\r\n    \"salePrice\": 1212,\r\n    \"quantity\": 2,\r\n    \"type\": \"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/v1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"v1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "db",
+								"value": "r2dbc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/product/v1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"v1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "db",
+								"value": "r2dbc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/product/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "db",
+								"value": "r2dbc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/product/v1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"v1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MongoDb",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "db",
+								"value": "mongo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Radio\",\r\n  \"description\": \"Musica \",\r\n  \"brandId\": \"Panasonic\",\r\n  \"salePrice\": 454,\r\n  \"quantity\": 2,\r\n  \"type\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "db",
+								"value": "mongo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Televisor\",\r\n    \"description\": \"sala cambiada\",\r\n    \"brandId\": \"Panasonic\",\r\n    \"salePrice\": 1212,\r\n    \"quantity\": 2,\r\n    \"type\": \"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/v1/6614bd0959bd1844151480cb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"v1",
+								"6614bd0959bd1844151480cb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "db",
+								"value": "mongo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/product/v1/6614bca159bd1844151480ca",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"v1",
+								"6614bca159bd1844151480ca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "db",
+								"value": "mongo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/product/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "db",
+								"value": "mongo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/product/v1/6614bca159bd1844151480ca",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"v1",
+								"6614bca159bd1844151480ca"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
